@@ -1,7 +1,7 @@
 # Projeto ReVende
 
 <p align="center">
-  <img src="./reVende/src/assets/logoRevende.svg" width="50%" />
+  <img src="https://revende.vercel.app/assets/logoRevende-nobg-LbKUSV3V.svg" width="50%" />
 </p>
 
 ## Visão Geral
@@ -17,7 +17,12 @@ Nosso objetivo é criar uma plataforma que facilite a conexão entre pessoas que
 - Compra e venda de produtos recicláveis.
 - Busca por produtos e categorias.
 - Sistema de avaliação de produtos e vendedores.
+- 
+## Repositórios
 
+- [Backend](https://github.com/ecommerceGrupo03/ReVende.git)
+- [Frontend](https://github.com/ecommerceGrupo03/ReVende-React.git)
+  
 ## Tecnologias Utilizadas
 
 - HTML
@@ -40,82 +45,6 @@ Nosso objetivo é criar uma plataforma que facilite a conexão entre pessoas que
 
 ***
 
-# Sistema de Controle de Acesso e Segurança
-
-Este é um projeto de sistema de controle de acesso e segurança desenvolvido com Spring Security e autenticação JWT. O sistema oferece funcionalidades para autenticação de usuários, gerenciamento de categorias e produtos.
-
-## Configuração e Instalação
-
-Para configurar e executar o projeto localmente, siga estas etapas:
-
-1. Clone o repositório para o seu ambiente de desenvolvimento:
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-1. Certifique-se de ter o JDK (Java Development Kit) e o Apache Maven instalados na sua máquina.
-2. Importe o projeto na sua IDE favorita como um projeto Maven existente.
-3. Certifique-se de configurar as dependências do projeto, como o Spring Boot e outras bibliotecas mencionadas no arquivo pom.xml.
-4. Configure as informações do banco de dados no arquivo application.properties ou application.yml.
-5. Compile e execute o projeto a partir da sua IDE ou utilizando o Maven:
-
-```bash
-mvn spring-boot:run
-```
-## Uso
-Após a execução do projeto, você pode acessar os endpoints HTTP para interagir com as funcionalidades oferecidas pelo sistema.
-
-## Autenticação de Usuários
-Para autenticar um usuário e receber um token JWT válido, envie uma solicitação POST para o endpoint /login com as credenciais de usuário. O token JWT será retornado como resposta e pode ser usado para autorização em outros endpoints.
-
-Exemplo de solicitação:
-```http
-POST /login
-Content-Type: application/json
-
-{
-  "email": "usuario@example.com",
-  "senha": "senha123"
-}
-```
-## Gerenciamento de Categorias
-O sistema oferece endpoints para criar, listar, atualizar e excluir categorias de produtos. As solicitações devem incluir um token JWT válido no cabeçalho Authorization para autorização.
-
-Exemplo de criação de categoria:
-
-```http
-POST /categorias
-Authorization: Bearer {seu-token-jwt}
-Content-Type: application/json
-
-{
-  "nome": "Categoria de Exemplo",
-  "descricao": "Esta é uma categoria de exemplo"
-}
-```
-## Gerenciamento de Produtos
-Da mesma forma que as categorias, o sistema oferece endpoints para criar, listar, atualizar e excluir produtos. As solicitações também devem incluir um token JWT válido para autorização.
-
-Exemplo de criação de produto:
-```http
-POST /produtos
-Authorization: Bearer {seu-token-jwt}
-Content-Type: application/json
-
-{
-  "nome": "Produto de Exemplo",
-  "descricao": "Este é um produto de exemplo",
-  "preco": 19.99,
-  "quantidade": 10,
-  "categoriaId": 1
-}
-```
-## Testes
-O projeto inclui testes automatizados para garantir a qualidade e a integridade do código. Você pode executar os testes unitários utilizando o Maven:
-
-```bash
-mvn test
-```
 ## Contribuição
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias, correções de bugs ou novas funcionalidades, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 <br></br>
